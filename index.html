@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random LOL</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    function spawnCharacter() {
+      const characters = ['æ', 'œ'];
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      const randomCharacter = characters[randomIndex];
+
+      const newCharacter = document.createElement('div');
+      newCharacter.textContent = randomCharacter;
+      newCharacter.classList.add('character');
+      newCharacter.style.left = Math.random() * window.innerWidth + 'px';
+      newCharacter.style.top = Math.random() * window.innerHeight + 'px';
+
+      document.body.appendChild(newCharacter);
+    }
+
+    setInterval(spawnCharacter, 100);
+  </script>
+</body>
+</html>
